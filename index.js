@@ -1,16 +1,10 @@
-console.log(`loading js-torch index.js\n${Date()}`);
-
-/*
-(async function(){
-    let url = 'https://esm.sh/js-pytorch'
-    let torch = (await import(url)).torch;
-})()
-*/
+console.log(`loading js-pytorch index.js\n${Date()}`);
 
 // js-torch dependency
 
 (async function(){
     let torch = (await import('./torch.mjs')).torch;
-    window.torch=torch
-    //debugger
+    try{
+        this.torch=torch; //maybe not a good idea ?
+    }   catch(err){console.error(err)};
 })()
