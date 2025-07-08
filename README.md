@@ -1,2 +1,2 @@
 # torch
-experimenting with js-torch, live at https://episphere.github.io !
+experimenting with js-pytorch, live at https://episphere.github.io/torch !
